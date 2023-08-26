@@ -1,6 +1,13 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+import type { Ref } from 'vue';
+
+const input: Ref<string> = ref('');
+</script>
+
 <template>
-  <form>
-    <input type="text" name="" id="" placeholder="Search GitHub username" />
+  <form class="boxShadow">
+    <input v-model="input" type="text" placeholder="Search GitHub username" />
     <button>Search</button>
   </form>
 </template>
@@ -10,8 +17,6 @@ form {
   background-color: #ffffff;
   padding: 12px;
   border-radius: 8px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
   display: flex;
   gap: 10px;
